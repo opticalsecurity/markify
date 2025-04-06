@@ -1,16 +1,14 @@
 "use client";
 
 import type { ConversionResult } from "@/types";
-import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 interface ResultDisplayProps {
   result: ConversionResult;
 }
 
 export function ResultDisplay({ result }: ResultDisplayProps) {
-  const [parent] = useAutoAnimate()
   return (
-    <div className="mt-2 flex flex-col gap-4" ref={parent}>
+    <div className="mt-2 flex flex-col gap-4">
       <div className="grid grid-cols-2 gap-4 rounded-lg border border-zinc-800 bg-zinc-900 p-4">
         <div>
           <h4 className="text-sm font-normal text-zinc-400">File Name</h4>

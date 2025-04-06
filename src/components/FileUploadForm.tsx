@@ -4,7 +4,6 @@ import { type FormEvent } from "react";
 import type { ConversionResult } from "@/types";
 import { Suspense } from "react";
 import dynamic from "next/dynamic";
-import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 const AdvancedSettings = dynamic<{
   show: boolean;
@@ -63,9 +62,8 @@ export function FileUploadForm({
   useCustomCredentials,
   setUseCustomCredentials
 }: FileUploadFormProps) {
-  const [parent] = useAutoAnimate()
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4" ref={parent}>
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
       <div className="flex flex-col gap-2">
         <label htmlFor="file" className="text-base font-normal">
           Upload your file to convert to Markdown
